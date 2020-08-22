@@ -1,0 +1,110 @@
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+ 
+  @include respond (desktop) {
+  max-width : 1024px;
+}
+
+@include respond (ipads) {
+  max-width: 750px;
+}
+
+@include respond (tab-port) {
+  max-width: 568px;
+}
+@include respond (phone) {
+  max-width: 420px;
+  padding: 0px 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 1px solid black;
+  padding-bottom: 6px;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+}
+
+p {
+  line-height: 1.5em;
+  color: #b2b2b3;
+  font-size: 1.2em;
+}
+
+
+
+.dots {
+  width: 50px;
+  display: flex;
+  height: 50px;
+  .dot {
+    width: 5px;
+    height: 5px;
+    background-color: #b2b2b3;
+  }
+  .dot:not(:last-of-type) {
+    margin-right: 10px;
+  }
+}
+
+}
+
+.btn {
+  background-color: #ea625c;
+  text-decoration: none;
+  color: #fff;
+  padding: 13px 20px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #ea635cd5;
+  }
+}
+
+
+.header__container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  height: 600px;
+
+  @include respond (desktop) {
+    max-width : 1024px;
+  }
+  @include respond (ipads) {
+    max-width: 750px;
+  }
+  @include respond (tab-port) {
+    max-width: 678px;
+  }
+  @include respond (phone) {
+    max-width: 420px;
+    padding: 0px 15px;
+    flex-direction: column;
+  }
+}
+
+
+
+@media screen and (max-width:420px) {
+ .nav .nav__links li {
+    margin: 10px 8px;
+  }
+}

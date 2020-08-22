@@ -1,0 +1,198 @@
+.nav {
+  padding: 50px 0px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include respond (phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 10px 18px;
+    }
+    a {
+      color: #b2b2b3;
+      padding-bottom: 0.5em;
+      font-size:  1em;
+      transition: linear .2s;
+
+      &:hover {
+        color: black;
+        border-bottom : 1.5px solid #b2b2b3;
+      }
+    }
+  }
+  input {
+    border : 0;
+    outline : 0;
+    border-bottom: 1px solid black;
+    margin-left: 10px;
+    padding: 5px 0px;
+  }
+
+  ::placeholder {
+    color: #b2b2b3;
+    font-size: 1.2em;}
+}
+
+.header {
+  height: 700px;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid #b2b2b3;
+  margin-bottom: 3em;
+  h1 {
+    margin-bottom: 0.85em;
+  }
+  &__left {
+    
+    width: 500px;
+    max-width: 100%;
+    
+    @include respond (phone) {
+      width : 100%;
+      margin-bottom: 60px;
+    }
+    p {
+      border-left: 3px solid #999;
+      padding-left: 2em;
+      line-height: 1.5em;
+      color: #b2b2b3;
+      margin-bottom: 80px;
+    }
+  }
+
+     &__right {
+   
+    .full {
+      height: 100%;
+      top: 0;
+      right: -10%;
+      position: absolute;
+      overflow: hidden;
+      animation: anime 3s ease;
+
+      @include respond (ipads) {
+        position: static;  
+        margin-left: 50px;
+       width: 100%;
+      }
+    }
+  }
+}
+
+.details {
+  color: #333;
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 70px;
+ 
+    @include respond (phone) {
+      grid-template-columns: 1fr!important;
+    }
+
+    @include respond (tab-port) {
+      grid-template-columns: repeat(2,1fr);
+    }
+    h2 {
+      margin-bottom: 1.5em;
+      text-transform: uppercase;
+      font-size: 1.25em;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1em;
+      color: #333;
+      word-break: break-all;
+    }
+    .line {
+      display: inline-block;
+      height: 2px;
+      width: 40px;
+      background-color: #ea625c;
+      margin-right: 10px;
+      transition: 0.2s ease-in-out;
+    }
+    a {
+      color: #ea625c;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+.details__button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover .line {
+    width: 60px;
+  }
+}
+
+
+.section-b {
+  margin: 60px 0px;
+  align-items: center;
+
+ &__holder {
+   display : flex;
+   align-items: center;
+   justify-content: space-between;
+
+   @include respond (phone) {
+     flex-direction: column;
+   }
+ }
+  p {
+    margin-top: 2.5em;
+  }
+
+  .right {
+    width: 50%;
+    @include respond (phone) {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.section-c {
+  background : url(.././img/runners.jpg) no-repeat center;
+  background-position: center;
+  background-size: cover;
+  height : 956px;
+  color: #fff;
+  position: relative;
+
+  .header__left {
+    position: absolute;
+    margin-left: auto;
+    top: 50%;
+    left: 68%;
+    transform: translate(-50%, -68%);
+    @include respond (ipads) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0px 20px;
+    }
+      p {
+      color: #fff;
+      border-color: #fff;
+     margin: 40px 0px 60px 0px;
+    }
+  }
+}
